@@ -1,0 +1,89 @@
+/*a:hover {  
+    color: red; /*изменяет цвет при наведении
+}
+a:active {
+    color: black; /*изменяет цвет при нажатии
+}
+body {
+    background-color: black;
+}
+a:first-child {
+    color: cadetblue; /*первый изменится
+}
+a:last-child {
+    color: blueviolet; /*последний изменится
+}
+a:nth-child(2){ /*включает число элемента, к которому обращаемся
+    color: chartreuse;
+} 
+a:nth-child(2n + 1) { /*нечетные
+    color: green;
+}
+a:nth-last-child(1){ /*считает с конца
+
+}
+a:not(.green){ /*условие которое здесь пропишем, применяется ко всем элементам. у которых нет класса green
+    color: aliceblue;
+}
+a:not(:first-child){ /*not лучше применять с чайлдами
+    color: orange;
+    transition:0.3s; /*плавное изменение смены цвета при наведении, 0 ставить необязательно .3s
+    /*transition: ease .3s; вариант изменения плавности*/
+    /*pointer-events: all; none кликнуть по ссылке нельзя
+    visibility: hidden; /*скрывает блок, но его место с размером остается
+}*/
+.menu{
+    display: flex;
+}
+ul{
+    padding: 0;
+    margin: 0;
+    list-style: none;
+}
+/* .menu_item{ 
+    margin-left: 200px;
+}
+.menu_item:first-child{
+    margin-left: 0;
+}
+.menu_item:not(:first-child){ 
+    margin-left: 200px;
+}*/
+.menu_item + .menu_item{
+    margin-left: 30px;
+}
+.menu_link{
+    text-decoration: none;
+    color: bisque;
+    padding: 15px;
+    display: block;
+    background-color: chocolate;
+    
+}
+.submenu{
+    display: none;
+    position: absolute;
+    background-color: violet;
+    padding: 20px;
+    border-radius: 10px;
+    left: 0;
+    width: 100px;
+    margin-top: 20px;
+
+}
+.submenu::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    width: 100%;
+    top: -20px;
+    height: 20px;
+    background-color: turquoise;
+}
+.menu_item:hover .submenu{
+    display: block;
+}
+.menu_item {
+    position: relative;
+    
+}
